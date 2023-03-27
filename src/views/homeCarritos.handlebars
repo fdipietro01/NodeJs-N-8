@@ -1,0 +1,42 @@
+<div class="alert alert-info">
+  <h1 class="mx-auto" style="width: 450px">Control de Carritos</h1>
+</div>
+
+<p class="text-center alert-info mx-auto" style="width: 40%" >Encuentre su carrito o bien cree un nuevo carrito para empezar a agregar
+  productos</p>
+<div style="display: flex">
+  <div class="mx-auto" style="width: 15%">
+    <form id="newCart">
+    <div class="form-group">
+      <label class="alert-info" style="padding:3px">Crear un nuevo Carrito</label>
+      <input
+        type="text"
+        class="form-control"
+        disabled
+        placeholder="Se generará con un Id predeterminado"
+      />
+    </div>
+    <div class="mx-auto" style="width: 50%">
+      <button type="submit" class="btn-info">Crear Carrito</button>
+    </div>
+    </form>
+  </div>
+  <div class="mx-auto" style="width: 15%">
+    <form id="searchCart">
+      <div class="form-group">
+        <label class="alert-info" style="padding:3px">Buscar Carrito por ID</label>
+        <input
+          type="text"
+          class="form-control"
+          id="cartId"
+          placeholder="Ingresar ID"
+        />
+      </div>
+      <div class="mx-auto" style="width: 50%">
+        <button type="submit" class="btn-info">Buscar Carrito</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/aleas/js/index.js"></script> 

@@ -1,0 +1,40 @@
+<div style="width: 95%; display: flex; justify-content: end">
+  <button action="#" style="margin-top: 15px;" class="btn-info px-2 py-1">
+    <a href="/sessions/github">
+      <strong style="color: white">Log In With Github</strong>
+    </a>
+  </button>
+</div>
+<h3 class="mt-10 text-center" style="margin-top:50px">Login de Usuarios</h3>
+<div id="containerForm" class="mx-auto" style="width: 20%; margin-top:50px;">
+  <form method="POST" action="/sessions/login">
+    <div class="form-group">
+      <label class="alert-info" style="padding:3px">Usuario</label>
+      <input
+        type="text"
+        class="form-control"
+        name="email"
+        placeholder="Ingresar tu mail"
+      />
+    </div>
+    <div class="form-group">
+      <label class="alert-info" style="padding:3px">Contraseña</label>
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        placeholder="Ingresar Contraseña"
+      />
+    </div>
+    <div
+      class="mx-auto"
+      style="width: 80%; display: flex; justify-content: space-around"
+    >
+      <button type="submit" class="btn-info px-4 py-2"><strong
+        >Login</strong></button>
+      <button class="btn-info px-4 py-2"><strong>
+          <a style="color: white" href="/relogin">Olvidé mi Contraseña</a>
+        </strong></button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+El proyecto está debidamente conectado a MongoAtlas, y todas los endpoints solicitados en la consigna están presentes.
+Para poder hacer accesible estos endpoints desde una interfaz gráfica, agregué algunos enpoints adicionales vinculados a vistas.
+Todas las vistas están hechas con handlebars.
+
+A continuación una breve guía:
+
+-http://localhost:8080/login
+Esta vista muestra un formulario de login. En caso de ya encontrarse una sesión iniciada, redirige al home de productos.
+
+-http://localhost:8080/register
+Esta vista muestra un formulario de registro. En caso de ya encontrarse una sesión iniciada, redirige al home de productos.
+En caso de registro exitose, muestra panatalla de confirmación con link al login.
+
+-http://localhost:8080/products
+Esta url muestra una tabla de los productos disponibles en la base de datos paginados. Muestra también el nombre del usuario logueado y un botón para finalizar la sesión. En caso de loguearse con usuario administrador, también muestra un formulario para agregar productos en tiempo real. La vista está paginada con un limt ajustado por default a 5 resultados.
+Si no hubiese una sesión iniciada, la pagina redirige al login.
+
+-http://localhost:8080/carts
+Esta url permite crear un nuevo carrito y obtener su numero de id. Con este, podemos buscar el carrito en la base de datos.
+Si no hubiese una sesión iniciada, la pagina redirige al login.
+
+
+-http:localhost:8080/carts/:id
+Esta url muestra el resultado de la búsqueda de un carrito y los productos que contiene. También permite ver los productos por agregar presentes en la base de datos
+Si no hubiese una sesión iniciada, la pagina redirige al login.
+
+
+Para acceder a la vista completa de productos que permite agregar productos nuevos a la base de datos es necesario tener rol de administrador. Las credenciales del usuario que hoy lo tienen son sigueinte:
+    -usuario: flavio@admin
+    -contraseña: admin

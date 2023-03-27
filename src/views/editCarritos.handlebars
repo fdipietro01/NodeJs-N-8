@@ -1,0 +1,86 @@
+<div style="display: flex; margin-top: 30px">
+    <div id="container" class="mx-auto" style="width: 45%">
+    <h2 class="alert-info text-center">CARRITO ID: <span id="idNumber">{{id}}</span></h2>
+        <table class="table table-stripped" id="tableProd">
+            <thead class="table-info">
+                <tr>
+                    <th class="text-center" scope="col">Titulo</th>
+                    <th class="text-center" scope="col">Descripción</th>
+                    <th class="text-center" scope="col">Precio</th>
+                    <th class="text-center" scope="col">Código</th>
+                    <th class="text-center" scope="col">Thumbnail</th>
+                    <th class="text-center" scope="col">Stock</th>
+                    <th class="text-center" scope="col">Categoría</th>
+                    <th class="text-center" scope="col">Status</th>
+                    <th class="text-center" scope="col">ID</th>
+                    <th class="text-center" scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+               {{#if cartExist}}
+                {{#each cartProducts}}
+                <tr>
+                    <td class="text-center">{{this.title}}</td>
+                    <td class="text-center">{{this.description}}</td>
+                    <td class="text-center">{{this.price}}</td>
+                    <td class="text-center">{{this.code}}</td>
+                    <td class="text-center"><img style="width:35px" src={{this.thumbnail}} alt="prd-img"></td>
+                    <td class="text-center">{{this.stock}}</td>
+                    <td class="text-center">{{this.category}}</td>
+                    <td class="text-center">{{this.status}}</td>
+                    <td class="text-center">{{this._id}}</td>
+                    <td class="text-center alert-danger">{{this.quantity}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+         {{else}}
+        </tbody>
+        </table>
+        <div id="alertContainer">
+            <div id="boxAlert" class="alert alert-danger mx-auto" style="width: 400px" role="alert">
+                <span class="mx-auto"> No existen productos agregados a este carrito por el momento.</span>
+            </div>
+        </div>
+         {{/if}}
+    </div>    
+
+
+
+    <div id="container" class="mx-auto" style="width: 25%">
+    <h2 class="alert-info text-center">Catalogo de Productos por agregar</h2>
+        <table class="table table-stripped" id="tableProd">
+            <thead class="table-dark">
+                <tr>
+                    <th class="text-center" scope="col">Titulo</th>
+                    <th class="text-center" scope="col">Precio</th>
+                    <th class="text-center" scope="col">Stock</th>
+                    <th class="text-center" scope="col">Status</th>
+                    <th class="text-center" scope="col">ID</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                {{#if catalogExists}}
+                {{#each catalogProducts}}
+                <tr>
+                    <td class="text-center">{{this.title}}</td>
+                    <td class="text-center">{{this.price}}</td>
+                    <td class="text-center">{{this.stock}}</td>
+                    <td class="text-center">{{this.status}}</td>
+                    <td class="text-center">{{this._id}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        </tbody>
+        </table>
+        <div id="alertContainer">
+            <div id="boxAlert" class="alert alert-danger mx-auto" style="width: 400px" role="alert">
+                <span class="mx-auto"> No existen productos agregados a este catalogo por el momento.</span>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
+

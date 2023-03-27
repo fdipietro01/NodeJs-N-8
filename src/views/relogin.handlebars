@@ -1,0 +1,26 @@
+<h3 class="mt-10 text-center" style="margin-top:50px">Olvidé mi Contraseña</h3>
+<div id="containerForm" class="mx-auto" style="width: 20%; margin-top:50px;">
+  <form method="POST" action="/sessions/relogin">
+    <div class="form-group">
+      <label class="alert-info" style="padding:3px">Usuario</label>
+      <input
+        type="text"
+        class="form-control"
+        name="mail"
+        placeholder="Ingresar tu mail"
+      />
+    </div>
+    <div class="form-group">
+      <label class="alert-info" style="padding:3px">Nueva Contraseña</label>
+      <input
+        type="password"
+        class="form-control"
+        name="pass"
+        placeholder="Ingresar Contraseña"
+      />
+    </div>
+    <div class="mx-auto" style="width: 25%">
+      <button type="submit" class="btn-info px-4 py-2 "><strong>Actualizar</strong></button>
+    </div>
+  </form>
+</div>
